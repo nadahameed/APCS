@@ -1,1 +1,2 @@
 Some teammates not comfortable with loops in java.
+Some teammates didn't finish this section.
