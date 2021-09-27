@@ -1,2 +1,3 @@
 No teammates comfortable with arrays.
 No one finished this section fully.
+We didn't know how to approach this problem so we didn't complete it.
