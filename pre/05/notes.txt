@@ -1,1 +1,1 @@
-This section of the assignment is something we all comprehend well.
+Some teammates not comfortable with this section of the prework, specifically non-void methods.
