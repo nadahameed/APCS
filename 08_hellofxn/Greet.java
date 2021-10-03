@@ -5,6 +5,6 @@ public class Greet {
 		Greet("Mr. Mykolyk");
 	}
 	public static void Greet(String a){
-	System.out.println("Hey there," + a + ". How are you today?");
+	System.out.println("Hey there, " + a + ". How are you today?");
 }
 }
