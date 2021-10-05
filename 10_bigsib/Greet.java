@@ -11,8 +11,8 @@ public class Greet {
         System.out.println(BigSibgreet("Stills") );
         System.out.println(BigSibgreet("Nash") );
     }
-    public static void BigSibgreet(String x) {
-        ("Why hello, " + x);
+    public static String BigSibgreet(String x) {
+        return ("Why hello, " + x);
     }
 }
 
