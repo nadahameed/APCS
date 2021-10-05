@@ -1,7 +1,7 @@
 /*
 Roaring '20s - Nada Hameed + Ray, Jeffery Tang + Mathias, Jefford Shau + Dylan
 APCS
-HW09 -- Greet calls class BigSib calls method greet
+HW09 -- Greet calls class BigSib calls method greet --> this is Greet
 10/04/2021
 */
 
