@@ -7,8 +7,11 @@ HW10 -- Refactor Big Sib One
 
 public class Greet {
     public static void main( String[] args ){
-        System.out.println( BigSib.greet("Crosby") );
-        System.out.println( BigSib.greet("Stills") );
-        System.out.println( BigSib.greet("Nash") );
+        System.out.println( BigSibgreet("Crosby") );
+        System.out.println( BigSibgreet("Stills") );
+        System.out.println( BigSibgreet("Nash") );
+    }
+    public static void BigSibgreet(String x) {
+        System.out.println("Why hello, " + x);
     }
 }
