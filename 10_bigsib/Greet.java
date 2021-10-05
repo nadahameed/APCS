@@ -18,5 +18,5 @@ DISCOVERIES:
 - This is essentially the same as HW09, but instead of random sound effects, you have names.
 
 UNRESOLVED QS:
--
+- How would you do this using the return command?
 */
