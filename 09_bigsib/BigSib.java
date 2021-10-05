@@ -6,7 +6,7 @@ HW09 -- Greet calls class BigSib calls method greet --> this is class BigSib
 */
 
 public class BigSib {
-    public static void greet(String name){
-        System.out.println("Hey there, " + name + ". How are you today?");
+    public static void greet(String x){
+        System.out.println("Here we have " + x + ".");
     }
 }
