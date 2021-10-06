@@ -1,45 +1,3 @@
-/* public class Greet {
-  public static void main( String[] args ) {
-    String greeting;
-
-    BigSib richard = new BigSib();
-    richard.setHelloMsg("Word up");
-
-    greeting = richard.greet("freshman");
-    System.out.println(greeting);
-    
-    BigSib remy = new BigSib();
-    richard.setHelloMsg("Salutations");
-
-    greeting = remy.greet("Dr. Spaceman");
-    System.out.println(greeting);
-    
-    BigSib raine = new BigSib();
-    raine.setHelloMsg("Hey ya");
-
-    greeting = raine.greet("Kong Fooey");
-    System.out.println(greeting);
-    
-    BigSib rorie = new BigSib();
-    rorie.setHelloMsg("Sup");
-
-    greeting = rorie.greet("mom");
-    System.out.println(greeting);
-
-  }
-  }
-  
-  result:
-  $ javac Greet.java
-Word up freshman
-Salutations Dr. Spaceman
-Hey ya Kong Fooey
-Sup mom
-  
-  
-  */
-
-
 
 public class BigSib {
   String a;
@@ -52,10 +10,17 @@ public class BigSib {
 }
 
   
- /*   public class BigSib {
-    public static void greet(String name){
-        System.out.println("It's quite nice to see you, " + name + "!");
-    }
-}
+ /* 
+DISCOVERIES:
+- early code for setHelloMsg: 
 
-*/
+    public String setHelloMsg(String helloMsg){
+      a = helloMsg;
+    }
+    
+  -> error message: missing return statement
+   -> instead of String, it has to be void, because in this method you are not returning anything.
+
+UNANSWERED QS:
+-
+ */
