@@ -1,3 +1,9 @@
+/*
+Nada Hameed + Ray, Hugo Jenkins + Boary
+APCS
+HW12 -- returns greetings specific to each big sib -- this is class BigSib called by Greet.java
+10/06/2021
+*/
 
 public class BigSib {
   String a;
