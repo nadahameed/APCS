@@ -42,8 +42,9 @@ Sup mom
 
 
 public class BigSib {
+  String a;
   public static String setHelloMsg(String helloMsg){
-    String a = helloMsg;
+    a = helloMsg;
   }
   public static String greet(String name){
     String x = name;
