@@ -47,8 +47,8 @@ public class BigSib {
   }
   public static void greet(String name){
     String x = name;
+    return (a + " " + x);
   }
-  greeting = (a + " " + x);
 }
 
   
