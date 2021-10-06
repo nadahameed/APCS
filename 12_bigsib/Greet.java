@@ -1,7 +1,7 @@
 /*
 Nada Hameed, Hugo Jenkins
 APCS
-HW12 -- returns greetings specific to each big sib -- this is class BigSib called by Greet.java
+HW12 -- returns greetings specific to each big sib -- this is Greet.java that calls on class BigSib
 10/06/2021
 */
 
