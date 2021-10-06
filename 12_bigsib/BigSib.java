@@ -1,7 +1,7 @@
 
 public class BigSib {
   String a;
-  public String setHelloMsg(String helloMsg){
+  public void setHelloMsg(String helloMsg){
     a = helloMsg;
   }
   public String greet(String name){
