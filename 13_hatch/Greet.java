@@ -1,7 +1,7 @@
 /*
-Nada Hameed, Hugo Jenkins
+NHS -- Nada Hameed + Ray, Hugo Jenkins + Boary
 APCS
-HW13 -- using a constructor
+HW13 -- using a constructor method
 10/07/2021
 */
 
