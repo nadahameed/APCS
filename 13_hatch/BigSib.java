@@ -33,5 +33,6 @@ DISCOVERIES:
   -> returned null [name] for all four big sibs
   
 UNRESOLVED QS:
-- 
+- where would you use private protection in this code?
+- is there a way to completely get rid of helloMsg, and instead just use variable "a"?
 */
