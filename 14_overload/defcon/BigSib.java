@@ -22,8 +22,8 @@ public class Greet {
 
 public class BigSib {
   String helloMsg;
-  public BigSib(String a){
-    helloMsg = a;
+  public BigSib(){
+    helloMsg = "HEYO";
   }
   public String greet(String name){
     return(helloMsg + " " + name);
