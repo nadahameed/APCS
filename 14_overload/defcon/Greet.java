@@ -1,5 +1,5 @@
 public class Greet {
-  public static vois main(String[] args){
+  public static void main(String[] args){
     String greeting;
     BigSib richard = new BigSib("Word Up");
     BigSib grizz = new BigSib("Hey ya");
