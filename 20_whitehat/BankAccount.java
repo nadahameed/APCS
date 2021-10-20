@@ -1,9 +1,9 @@
-/*
-Team Holister {Brianna, Pepe, Fang, Cat, Nicole, Duck}
-APCS
-HW19 -- Mo Money Mo Problems ...MORE AWESOME
-2021-10-19
-*/
+/**
+   Team NBJ, Jun Hong Wang, Brian K., Nada Hameed
+   APCS pd6
+   HW20 -- External Audit
+   2021-10-20
+**/
 
 public class BankAccount {
 
