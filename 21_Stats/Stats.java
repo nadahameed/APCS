@@ -2,7 +2,7 @@
    Team NBJ: Nada, Brian K., Jun Hong
    APCS PD6
    HW21 -- STAtisTically Speaking...
-   2021-10-20
+   2021-10-21
    
    xtra: harmonic mean is the reciprocal of the
    arithmetic mean of the reciprocals
