@@ -59,6 +59,15 @@ public class Driver {
       else {
         System.out.println( "No match. Firestarter you can not be." );
       }
+      
+      
+      while ((yours.flipCtr + wayne.flipCtr) < 10){
+      		yours.flip();
+      		wayne.flip();
+      }
+      System.out.println("youve hit 10 flips!");
+      
+     
       /*===================TOP==========================
       ====================BOTTOM======================*/
 

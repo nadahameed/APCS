@@ -28,5 +28,5 @@ DISCOVERIES:
    -> instead of String, it has to be void, because in this method you are not returning anything.
 
 UNRESOLVED QS:
--
+- public vs. private?
  */
