@@ -53,21 +53,30 @@ public class Driver {
       System.out.println("wayne: " + wayne);
 
       //test equals() method
+      int matchCtr = 0;
       if (yours.equals(wayne) ) {
         System.out.println( "Matchee matchee!" );
+        matchCtr ++;
       }
       else {
         System.out.println( "No match. Firestarter you can not be." );
       }
       
-   /*   
-      while ((yours.flipCtr + wayne.flipCtr) < 10){
+      while ((yours.headsCtr + wayne.headsCtr) < 10) and (matchCtr == 5) {
       		yours.flip();
       		wayne.flip();
+        int matchCtr = 0;
+        if (yours.equals(wayne) ) {
+          System.out.println( "Matchee matchee!" );
+          matchCtr ++;
+        }
+        else {
+          System.out.println( "No match. Firestarter you can not be." );
+      }
       }
       System.out.println("youve hit 10 flips!");
    
-   */
+   /*
      if ((yours.headsCtr + wayne.headsCtr) == 5){
      System.out.println("5!");
      }
