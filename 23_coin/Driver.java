@@ -4,13 +4,11 @@ APCS
 HW23: What does equality look like?
 2021-10-24
 time spent: 37 mins (utilitarian methods completed in 30 minutes (exactly!)
-
 DISCO:
  - objects can communicate directly to other objects via obj.var/method.
  - fun probability stuff with flip()! how to put biases into the flip.
 QCC:
  - why does bias need to be a variable and not hardcoded if we are not going to manipulate it?
-
 */
 
 /***
@@ -53,37 +51,12 @@ public class Driver {
       System.out.println("wayne: " + wayne);
 
       //test equals() method
-      int matchCtr = 0;
       if (yours.equals(wayne) ) {
         System.out.println( "Matchee matchee!" );
-        matchCtr ++;
       }
       else {
         System.out.println( "No match. Firestarter you can not be." );
       }
-      
-      while (((yours.headsCtr + wayne.headsCtr) < 10) && (matchCtr == 5)){
-      		yours.flip();
-      		wayne.flip();
-        if (yours.equals(wayne) ) {
-          System.out.println( "Matchee matchee!" );
-          matchCtr ++;
-        }
-        else {
-          System.out.println( "No match. Firestarter you can not be." );
-      }
-      }
-      //System.out.println("youve hit 10 flips!");
-   
-   /*
-     if ((yours.headsCtr + wayne.headsCtr) == 5){
-     System.out.println("5!");
-     }
-     else {
-     yours.flip();
-     wayne.flip();
-     }
-     
       /*===================TOP==========================
       ====================BOTTOM======================*/
 
