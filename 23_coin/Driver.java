@@ -65,7 +65,6 @@ public class Driver {
       while (((yours.headsCtr + wayne.headsCtr) < 10) && (matchCtr == 5)){
       		yours.flip();
       		wayne.flip();
-        int matchCtr = 0;
         if (yours.equals(wayne) ) {
           System.out.println( "Matchee matchee!" );
           matchCtr ++;
