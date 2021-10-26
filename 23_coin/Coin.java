@@ -129,12 +129,8 @@ public class Coin {
       postcond: Coin's attribs reset to starting vals
   ***/
   public void reset( String s, double d ) {
-    	value = 0;
-  	upFace = s;
-  	flipCtr = 0;
-  	tailsCtr = 0;
-  	headsCtr = 0;
-  	bias = d;
+    value = 0;
+  	upFace = "heads";
   }
 
   /***
@@ -150,8 +146,8 @@ public class Coin {
   public String flip() {
     flipCtr ++ ;
     double probability = Math.random();
-    System.out.println(probability);
-    if (probability < bias){
+    //System.out.println(probability);
+    if (probability < 0.5){
       upFace = "heads";
       headsCtr ++;
     }
