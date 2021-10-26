@@ -62,7 +62,7 @@ public class Driver {
         System.out.println( "No match. Firestarter you can not be." );
       }
       
-      while (((yours.headsCtr + wayne.headsCtr) < 10) and (matchCtr == 5)){
+      while (((yours.headsCtr + wayne.headsCtr) < 10) and (matchCtr == 5)));{
       		yours.flip();
       		wayne.flip();
         int matchCtr = 0;
