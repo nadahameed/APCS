@@ -16,4 +16,5 @@ public class DoubleChar {
 }
   public static void main(String[] args) {
     doubleChar("cat");
+  }
 }
