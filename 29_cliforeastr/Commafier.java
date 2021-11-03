@@ -3,17 +3,19 @@ Team NBJ - Nada Hameed, Brian Kang, Jun Hong Wang
 APCS
 HW 29 - Which Way Do You Roll?
 11/03/2021
+time: ~1 hour
 
 DISCO:
-- there has to be something that deals with when i is < 1000
+- there has to be something that deals with when i is < 1000 for recursion
+--> for the iterative way, it may have been more efficient to have if i < 1000 ... similar to what is done for recursion
 
 QCC:
-- is there a way to use less variables?
+- is there a way to use less variables? (are all of the variables in this code necessary?)
 
 */
 
 public class Commafier{
-
+//iterative commafier
   public static String commafyI (Integer i){
     String str = i.toString();
     String output = "";
@@ -31,7 +33,7 @@ public class Commafier{
   }
 
   public static String commafyR (Integer i){
-
+//recursive commafier
     String str = i.toString();
 
     if (i < 1000) {
@@ -41,22 +43,8 @@ public class Commafier{
     int sub = Integer.parseInt(str.substring(0, str.length() - 3));
 
     return (commafyR(sub) + "," + str.substring(str.length() - 3));
-
   }
 
-/*
-    String str = i.toString();
-    int counter = 0;
-    String output = "";
-    if (counter < str.length()) {
-      counter++;
-      String sub =
-      if (counter % 3 == 0) {
-        output =  "," + sub + output;
-      }
-    }
-  }
-*/
   public static void main(String[] args){
 
     for(String input : args) {
