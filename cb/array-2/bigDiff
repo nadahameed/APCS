@@ -1,6 +1,6 @@
 public int bigDiff(int[] nums) {
   if(nums.length == 1){
-    return nums[0];
+    return 0;
   }
   int x = nums[0];
   int y = nums[0];
