@@ -1,0 +1,7 @@
+public int[] maxEnd3(int[] nums) {
+  int a = Math.max(nums[2], nums[0]);
+  nums[0] = a;
+  nums[1] = a;
+  nums[2] = a;
+  return nums;
+}
