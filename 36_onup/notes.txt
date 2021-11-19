@@ -1,0 +1,53 @@
+APPENDIX D DEBUGGING:
+
+- COMPILE-TIME ERRORS
+   -> something wrong with syntax of code
+   - error messages can be misleading and/or unreliable
+      - ex: num of errors, where exactly error is located
+    -> they can be accurate sometimes - thus, valuable
+    - common errors: brackets/parantheses/semicolons, definitions, ass. type, arg. order, obj. type, static/void
+   - compiler may be looking at the incorrect code
+   - debugging by bisection (last resort):
+      - make a copy
+      - delete half the code - look for errors when running
+      - add more back to the code bit by bit until an error is located
+      
+- RUN-TIME ERRORS
+   - hanging program: stops, looks like nothing is happening
+    -> probably infinite loop/recursion
+    - add print statements in different parts of the loop, w/ parameters, to indicate where the program may be getting stuck
+    - infinite recursion error: probably returns StackOverflowError
+      - needs base case
+   - exceptions: message returned is: name of exception, line # where it occurred, stack trace (method that was running, its invoking method, etc)
+     - NullPointerException: null variable (be mindful that all variables remain null until assigned a value)
+     - ArrayIndexOutOfBoundsException
+     - StackOverflowError
+     - FileNotFoundException
+     - ArithmeticException (ex: div. by 0)
+   - too many print statements/outputs
+     - simplify output (print statements)
+     - simplify program
+    -> clean up code
+    
+- LOGIC ERRORS
+   - compiler and interpreter don't say what's wrong
+   - check to make sure you know what the code should be doing and what it is actually doing
+   - try breaking program into components (ex: classes, methods) and test them separately
+   - examples: integer division, floating pt., equality, inheritance
+   - try breaking complex expressions into temporary vars.
+   - keep in mind order of operations, print vs. println
+   
+- IF YOU'RE STUCK
+   - step away from the computer to avoid:
+        - frustration
+        - superstitious beliefs
+        - sour grapes
+       -> go for a walk, calm down
+   - ask for help if you really need it
+      - before doing so, simplify the program and narrow it down to what the error may be in - understand the problem
+       -> by the time you've explained the problem to someone, you may have figured it out
+        ==> thus, "rubber ducking"
+        
+- bugs may be more than just a bug, and you may have to rethink your code/implementation
+  - continue thinking about the bug to avoid that type of error in the future
+   
