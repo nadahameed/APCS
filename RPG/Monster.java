@@ -7,5 +7,9 @@ public class Monster{
     }
     return false;
   }
-
+  
+  public int attack(being){
+    being.health -= 3;
+    return 3;
+  }
 }
