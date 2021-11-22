@@ -12,7 +12,7 @@ public class Protagonist{
   public void specialize(){
     atkpwr = 4;
   }
-`
+
   public void normalize(){
     atkpwr = 2;
   }
