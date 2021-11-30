@@ -16,13 +16,16 @@ public class TwoDimArray
   public static void print1( int[][] a )
   {
     // YOUR IMPLEMENTATION HERE
-    for(int i = 0; i < a.length - 1; i++){
-      System.out.println(a[i][i]);
+    for(int i = 0; i < a.length; i++){
+      //int[] sub = new int[a[i].length];
+    //  System.out.println(a[i][a[i].length - 1]);
+  //    System.out.println(a[i][a[i].length - 1]);
+      System.out.println(a[i][a[i].length - i]);
     }
   }
 
 
-  //postcond: prints each row of 2D int array a on its own line
+/*  //postcond: prints each row of 2D int array a on its own line
   //          uses a FOREACH loop
   public static void print2( int[][] a )
   {
@@ -62,14 +65,14 @@ public class TwoDimArray
     return summer;
   }
 
-
+*/
   public static void main( String [] args )
   {
-    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       int [][] m1 = new int[4][2];
       int [][] m2 = { {2,4,6}, {3,5,7} };
       int [][] m3 = { {2}, {4,6}, {1,3,5} };
-      print1(m1);
+      print1(m2);
+        /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       print1(m2);
       print1(m3);
       print2(m1);
