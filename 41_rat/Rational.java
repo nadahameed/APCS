@@ -39,8 +39,8 @@ public class Rational{
   }
   
   public void multiply(Rational factor){
-    this().p *= factor.p;
-    this().q *= factor.q;
+    p.this *= p.factor;
+    q.this *= q.factor;
   }
   
  /* public void divide(Rational factor){
