@@ -16,8 +16,8 @@ QCCs:
 
 public class Rational{
   
-  public int num;
-  public int den;
+  protected int num;
+  protected int den;
   
   public Rational(){
     num = 0;
