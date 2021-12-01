@@ -8,6 +8,22 @@
 // HW40 -- 2D arrays
 // 2021-11-30
 
+/*
+DISCOS:
+- when we print a[0] (and a is a 2D array), the address is returned
+  - why is that?
+- a[index] to access a row
+- a[row][column]
+
+QCCs:
+> why is the address returned instead of a value when a[0] is printed?
+- how else can we use nested for loops? nested foreach loops?
+- is there a different way to print the separate rows instead of using a nested for loop?
+
+
+
+*/
+
 public class TwoDimArray{
   
   public static void print1( int[][] a ){
