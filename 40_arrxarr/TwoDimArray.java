@@ -1,6 +1,5 @@
 /******************************
  * class TwoDimArray
- * (skeleton)
  * practice working with 2D arrays
  ******************************/
 
@@ -10,13 +9,14 @@
 // 2021-11-30
 
 public class TwoDimArray{
+  
   public static void print1( int[][] a ){
     // YOUR IMPLEMENTATION HERE
     for (int i = 0; i < a.length; i += 1){
-      int[] sub = a[i];
-      String row = "[" + sub[0];
-      for (int x = 1; x < sub.length; x += 1){
-        row += ", " + sub[x];
+      int[] s = a[i];
+      String row = "[" + s[0];
+      for (int x = 1; x < s.length; x += 1){
+        row += ", " + s[x];
       }
       System.out.println(row + "]");
     }
@@ -24,10 +24,10 @@ public class TwoDimArray{
 
   public static void print2( int[][] a ){
     // YOUR IMPLEMENTATION HERE
-    for (int[] sub : a){
-      String row = "[" + sub[0];
-      for (int x = 1; x < sub.length; x += 1){
-        row += ", " + sub[x];
+    for (int[] s : a){
+      String row = "[" + s[0];
+      for (int x = 1; x < s.length; x += 1){
+        row += ", " + s[x];
       }
       System.out.println(row + "]");
     }
@@ -36,8 +36,8 @@ public class TwoDimArray{
   public static int sum1( int[][] a ){
     // YOUR IMPLEMENTATION HERE
     int sum = 0;
-    for (int[] sub : a){
-      for (int x : sub){
+    for (int[] s : a){
+      for (int x : s){
         sum += x;
       }
     }
@@ -55,10 +55,10 @@ public class TwoDimArray{
 
   public static int sumRow( int r, int[][] a ){
     // YOUR IMPLEMENTATION HERE
-    int[] sub = a[r];
+    int[] s = a[r];
     int sum = 0;
-    for (int i = 0; i < sub.length; i += 1){
-      sum += sub[i];
+    for (int i = 0; i < s.length; i += 1){
+      sum += s[i];
     }
     return sum;
   }
@@ -66,8 +66,8 @@ public class TwoDimArray{
   public static int sumRow2(int r, int[][] m){
     // *** YOUR IMPLEMENTATION HERE ***
     int summer = 0;
-    int[] sub = m[r];
-    for (int x : sub){
+    int[] s = m[r];
+    for (int x : s){
       summer += x;
     }
     return summer;
