@@ -24,9 +24,9 @@ public class Rational{
     q = 1;
   }
 
-  public Rational(int x, int y){
-      num = x;
-      den = y;
+  public Rational(int p, int q){
+      num = p;
+      den = q;
   }
 
   public double floatValue(){
