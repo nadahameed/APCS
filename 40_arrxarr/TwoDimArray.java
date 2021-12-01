@@ -10,10 +10,9 @@
 // 2021-11-30
 
 public class TwoDimArray{
-  
   public static void print1( int[][] a ){
     // YOUR IMPLEMENTATION HERE
-    for (int i = 0; i < a.length; i++ 1){
+    for (int i = 0; i < a.length; i += 1){
       int[] sub = a[i];
       String row = "[" + sub[0];
       for (int x = 1; x < sub.length; x += 1){
@@ -22,7 +21,7 @@ public class TwoDimArray{
       System.out.println(row + "]");
     }
   }
-/*
+
   public static void print2( int[][] a ){
     // YOUR IMPLEMENTATION HERE
     for (int[] sub : a){
@@ -63,7 +62,7 @@ public class TwoDimArray{
     }
     return sum;
   }
-*/
+
   public static int sumRow2(int r, int[][] m){
     // *** YOUR IMPLEMENTATION HERE ***
     int summer = 0;
