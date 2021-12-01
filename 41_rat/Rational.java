@@ -38,7 +38,7 @@ public class Rational{
     return (float)(num / den);
   }
   
-  public void multiply(Rational factor){
+  public void multiply(Rational f){
     this.p *= factor.p;
     this.q *= factor.q;
   }
