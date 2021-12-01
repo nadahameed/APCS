@@ -34,7 +34,7 @@ public class Rational{
     return s;
   }
   
-  public floatValue(){
+  public float floatValue(){
     return (float)(num / den);
   }
   
