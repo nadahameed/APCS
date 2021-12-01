@@ -16,8 +16,8 @@ QCCs:
 
 public class Rational{
   
-  protected int num;
-  protected int den;
+  public int num;
+  public int den;
   
   public Rational(){
     num = 0;
@@ -44,7 +44,7 @@ public class Rational{
   }
   
   public void divide(Rational factor){
-    this.p /= factor.p;
-    this.q /= factor.q;
+    this.p *= factor.q;
+    this.q *= factor.p;
   }
 }
