@@ -38,12 +38,12 @@ public class Rational{
     return (float)(num / den);
   }
   
-  public Multiply(Rational factor){
+  public void Multiply(Rational factor){
     this.p = this.p * factor.p;
     this.q = this.q * factor.q;
   }
   
-  public Divide(Rational factor){
+  public void Divide(Rational factor){
     this.p = this.p / factor.p;
     this.q = this.q / factor.q;
   }
