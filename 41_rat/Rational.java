@@ -39,12 +39,12 @@ public class Rational{
   }
   
   public void multiply(Rational factor){
-    this.p = this.p * factor.p;
-    this.q = this.q * factor.q;
+    this.p *= factor.p;
+    this.q *= factor.q;
   }
   
   public void divide(Rational factor){
-    this.p = this.p / factor.p;
-    this.q = this.q / factor.q;
+    this.p /= factor.p;
+    this.q /= factor.q;
   }
 }
