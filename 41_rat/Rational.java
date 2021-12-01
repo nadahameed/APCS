@@ -43,8 +43,8 @@ public class Rational{
     this().q *= factor.q;
   }
   
-  public void divide(Rational factor){
+ /* public void divide(Rational factor){
     this().p *= factor.q;
     this().q *= factor.p;
-  }
+  }*/
 }
