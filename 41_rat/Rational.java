@@ -16,28 +16,27 @@ QCCs:
 
 public class Rational{
   
-  public int num;
-  public int den;
-  
+  protected int num;
+  protected int den;
+
   public Rational(){
-    num = 0;
-    den = 1;
+    p = 0;
+    q = 1;
   }
-  
-  public Rational(int p, int q){
-    num = p;
-    den = q;
+
+  public Rational(int x, int y){
+      num = x;
+      den = y;
   }
-  
+
+  public double floatValue(){
+    return (p/q);
+  }
+
   public String toString(){
-    String s = num + " / " + den;
-    return s;
+    return (p + " / " + q);
   }
-  
-  public float floatValue(){
-    return (float)(num / den);
-  }
-  
+
   public void multiply(Rational factor){
     this.p *= factor.p;
     this.q *= factor.q;
