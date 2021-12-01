@@ -6,6 +6,8 @@ public class RationalMain{
     Rational s = new Rational(1, 2);       //Stores rational number 1/2
     System.out.println(r.toString());
     System.out.println(s.toString());
-    System.out.println(r.multiply(s));      //Multiplies r by s, changes r to 2/6.  s remains 1/2
+    
+    r.multiply(s);
+    System.out.println(r.toString());      //Multiplies r by s, changes r to 2/6.  s remains 1/2
   }
 }
