@@ -4,24 +4,26 @@ TNPG: doubleN - Nicole Zhou + Duck, Nada Hameed + Ray
 APCS
 HW41: Be Rational
 2021-12-02
-time spent:
+time spent: 1 hr
 
 DISCOS:
-- 
+- there is no difference between using this.num and just num
+- precondition: num and den are ints
 
 QCCs:
-- 
+- would it have been more efficient to include accessors?
+- how would we implement a simplify method?
 
 */
 
 public class Rational{
-  
-  protected int num;
-  protected int den;
+
+  public int num;
+  public int den;
 
   public Rational(){
-    p = 0;
-    q = 1;
+    num = 0;
+    den = 1;
   }
 
   public Rational(int p, int q){
@@ -33,24 +35,23 @@ public class Rational{
        num = p;
        den = q;
     }
-   }
   }
 
   public double floatValue(){
-    return (double)(p/q);
+    return (double)(num / den);
   }
 
   public String toString(){
-    return (p + " / " + q);
+    return (num + " / " + den);
   }
 
   public void multiply(Rational factor){
-    p *= factor.p;
-    q *= factor.q;
+    num *= factor.num;
+    den *= factor.den;
   }
-  
- /* public void divide(Rational factor){
-    this().p *= factor.q;
-    this().q *= factor.p;
-  }*/
+
+  public void divide(Rational factor){
+    num *= factor.den;
+    den *= factor.num;
+  }
 }
