@@ -38,7 +38,8 @@ public class Rational{
   }
 
   public double floatValue(){
-    return (double)(num / den);
+    double decimal = (double)num / den;
+    return decimal;
   }
 
   public String toString(){
