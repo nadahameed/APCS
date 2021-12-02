@@ -25,12 +25,19 @@ public class Rational{
   }
 
   public Rational(int p, int q){
-      num = p;
-      den = q;
+    if (q == 0){
+      num = 0;
+      den = 1;
+      System.out.println("not possible!");
+    } else {
+       num = p;
+       den = q;
+    }
+   }
   }
 
   public double floatValue(){
-    return (p/q);
+    return (double)(p/q);
   }
 
   public String toString(){
@@ -38,8 +45,8 @@ public class Rational{
   }
 
   public void multiply(Rational factor){
-    this.p *= factor.p;
-    this.q *= factor.q;
+    p *= factor.p;
+    q *= factor.q;
   }
   
  /* public void divide(Rational factor){
