@@ -2,17 +2,17 @@
 
 TNPG: doubleN - Nicole Zhou + Duck, Nada Hameed + Ray
 APCS
-HW41: Be Rational
-2021-12-02
-time spent: 1 hr
+HW41: Be More Rational
+2021-12-06
+time spent: 45 min
 
 DISCOS:
-- there is no difference between using this.num and just num
-- precondition: num and den are ints
+- compareTo utilizes signals/flags
 
 QCCs:
-- would it have been more efficient to include accessors?
-- how would we implement a simplify method?
+- what's the most efficient way to revert a rational to its original state?
+- is there a way to reduce the sum/difference in one method?
+ -> without having to add/subtract and then reduce
 
 */
 
@@ -56,29 +56,61 @@ public class Rational{
     den *= input.num;
   }
 
-  //simplify
-
-  /*add
+  //add
   public void add(Rational input){
-
-  }*/
+    //creating ints n and d to so that it doesn't affect the conversion of the input's num and den
+    int n = num * input.den;
+    int d = den * input.den;
+    input.num *= den;
+    input.den *= den;
+    num = n + input.num;
+    den = d;
+  }
 
   //subtract
-
+  public void subtract(Rational input){
+    //creating ints n and d to so that it doesn't affect the conversion of the input's num and den
+    int n = num * input.den;
+    int d = den * input.den;
+    input.num *= den;
+    input.den *= den;
+    num = n - input.num;
+    den = d;
+  }
 
   //gcd helper
-  public static int gcd(int a, int b){
-    int x = 1;
-    int gcd = 1;
-    while ((x <= a) && (x <= b)){
-      if ((a % x == 0) && (b % x == 0)){
-        gcd = x;
-      }
-      x += 1;
+  public static int gcd( int a, int b ) {
+
+    if (a == 0) {
+      return b;
     }
-    return gcd;
+    if (b == 0) {
+      return a;
+    }
+    if (a <= b) {
+      return gcd(a, b-a);
+    } else {
+      return gcd(a-b, b);
+    }
+  }
+
+  //simplify
+  public void reduce(){
+    int gcd = gcd(num, den);
+    num = num / gcd;
+    den = den / gcd;
   }
 
   //compareTo
-
+  public int compareTo(Rational input){
+    subtract(input);
+    if (num > 0) {
+      return 1; //input is smaller
+    }
+    if (num == 0) {
+      return 0; //they're the same
+    } else {
+      return -1; //input is larger
+    }
+  }
 }
