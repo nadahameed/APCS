@@ -1,7 +1,16 @@
-// Clyde "Thluffy" Sinclair
-// APCS1 pd0
-// HW44 -- expanding SuperArray functionality, encapsulation
-// 2021-12-08w
+/*
+Nicole Zhou + Duck, Corina Chen + Binktop, Nada Hameed + Ray
+APCS1 pd6
+HW44 -- expanding SuperArray functionality, encapsulation (wrapper class of an array)
+2021-12-08
+time spent: 25 mins
+
+DISCOS:
+- the expand method is handy when using add
+
+QCCS:
+- what else can we do with size?
+- we have expand - how would we do the opposite (reduce by half)?
 
 /***************************
  * class SuperArray version 2.0
@@ -82,18 +91,30 @@ public class SuperArray
 
 
   //inserts an item at index
-  // public void add( int index, int newVal )
-  // {
-  //   /* YOUR IMPLEMENTATION HERE */
-  // }
-  //
-  //
+  public void add( int index, int newVal )
+  {
+    /* YOUR IMPLEMENTATION HERE */
+    if(_size >= _data.length){
+      expand();
+    }
+    for (int i = _size; i > index; i--) {
+      _data[i] = _data[i - 1];
+    }
+    _size++;
+    _data[index] = newVal;
+  }
+
+
   // //removes the item at index
   // //shifts elements left to fill in newly-empted slot
-  // public void remove( int index )
-  // {
-  //   /* YOUR IMPLEMENTATION HERE */
-  // }
+  public void remove( int index )
+  {
+    /* YOUR IMPLEMENTATION HERE */
+    _size--;
+    for(int i = index; i < _size; i ++){
+      _data[i] = _data[i + 1];
+    }
+  }
 
 
   //return number of meaningful items in _data
@@ -140,7 +161,7 @@ public class SuperArray
 
       System.out.println("Printing populated SuperArray mayfield...");
       System.out.println(mayfield);
-/*~~~~~~~~move~me~down~~~~~~~~~~~~~~V~~~~~~~~
+
       mayfield.remove(3);
       System.out.println("Printing SuperArray mayfield post-remove...");
       System.out.println(mayfield);
@@ -157,6 +178,7 @@ public class SuperArray
       mayfield.add(1,77);
       System.out.println("Printing SuperArray mayfield post-insert...");
       System.out.println(mayfield);
+      /*~~~~~~~~move~me~down~~~~~~~~~~~~~~V~~~~~~~~
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|~~~~~~~~*/
   }//end main()
 
