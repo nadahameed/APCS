@@ -1,5 +1,5 @@
 /*
-Nicole Zhou + Duck, Corina Chen + Binktop, Nada Hameed + Ray
+TNPG: CNN - Nicole Zhou + Duck, Corina Chen + Binktop, Nada Hameed + Ray
 APCS1 pd6
 HW44 -- expanding SuperArray functionality, encapsulation (wrapper class of an array)
 2021-12-08
