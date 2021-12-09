@@ -82,16 +82,17 @@ public class SuperArray implements ListInt
 
 
   //adds an item after the last item
-  public void add( int newVal )
+  public boolean add( int newVal )
   {
     /* YOUR IMPLEMENTATION HERE */
       _data[_size] = newVal;
       _size++;
+      return true;
   }
 
 
   //inserts an item at index
-  public void add( int index, int newVal )
+  public boolean add( int index, int newVal )
   {
     /* YOUR IMPLEMENTATION HERE */
     if(_size >= _data.length){
@@ -102,6 +103,7 @@ public class SuperArray implements ListInt
     }
     _size++;
     _data[index] = newVal;
+    return true;
   }
 
 
