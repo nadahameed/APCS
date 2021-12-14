@@ -1,8 +1,8 @@
-// Clyde "Thluffy" Sinclair
-// APCS pd0
+// TNPG: CNN - Nicole Zhou + Duck, Corina Chen + Binktop, Nada Hameed + Ray
+// APCS pd6
 // HW47 -- ?
 // 2021-12-15w
-// time spent: _ hrs
+// time spent: 0.2 hrs
 
 /***
  * class GuessNumber -- fun fun fun!
@@ -21,8 +21,11 @@
 
 /***
     DISCO:
-
+    - guess = sc.nextLine() will take what the user types in and set it to guess
+      -> if you type something that isn't an int, you will get an Exception error
     QCC:
+    - when setting _target, we didn't use _lo or _hi in the name of caution
+    - under the guise of grammar, it'd make sense to be able to adapt to guessing in one try (v "tries")
 
  ***/
 import java.util.Scanner;
@@ -84,30 +87,37 @@ public class GuessNumber
     void playIter() -- Prompts a user to guess until guess is correct.
     Uses iteration.
     ==================================================*/
-  // public void playIter()
-  // {
-  //
-  //   int guess;
-  //
-  //   while( true ) {
-  //     System.out.print("Guess a num bt " + _lo + " & " + _hi + ": ");
-  //     guess = sc.nextInt();
-  //
-  //     //3 cases: we either found it, too hi, too lo
-  //
-  //     /* YOUR CODE HERE */
-  //
-  //     _guessCtr++;
-  //   }
-  // }
+  public void playIter()
+  {
+
+    int guess;
+
+    while( true ) {
+      System.out.print("Guess a num bt " + _lo + " & " + _hi + ": ");
+      guess = sc.nextInt();
+
+      //3 cases: we either found it, too hi, too lo
+
+      /* YOUR CODE HERE */
+      if(guess > _target){
+        _hi = guess - 1;
+      } else if(guess < _target){
+        _lo = guess + 1;
+      } else{
+        System.out.println("Victory! Thou hast guessed correct, after a whopping " + _guessCtr + " tries");
+        break;
+      }
+      _guessCtr++;
+    }
+  }
 
 
   //wrapper for playRec/playIter to simplify calling
   public void play()
   {
     //use one or the other below:
-    playRec();
-    //playIter();
+    //playRec();
+    playIter();
   }
 
 
