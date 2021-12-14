@@ -1,6 +1,6 @@
 // TNPG: CNN - Nicole Zhou + Duck, Corina Chen + Binktop, Nada Hameed + Ray
 // APCS pd6
-// HW47 -- ?
+// HW47 -- Guess Again
 // 2021-12-15w
 // time spent: 0.2 hrs
 
@@ -26,6 +26,7 @@
     QCC:
     - when setting _target, we didn't use _lo or _hi in the name of caution
     - under the guise of grammar, it'd make sense to be able to adapt to guessing in one try (v "tries")
+    - we could also adapt to a guess that's higher than the given range
 
  ***/
 import java.util.Scanner;
@@ -72,10 +73,12 @@ public class GuessNumber
     if(guess > _target){
       _hi = guess - 1;
       _guessCtr++;
+      System.out.println("Too high, give it another shot--");
       playRec();
     } else if(guess < _target){
       _lo = guess + 1;
       _guessCtr++;
+      System.out.println("Too low, give it another shot--");
       playRec();
     } else{
       System.out.println("Victory! Thou hast guessed correct, after a whopping " + _guessCtr + " tries");
@@ -100,8 +103,10 @@ public class GuessNumber
 
       /* YOUR CODE HERE */
       if(guess > _target){
+        System.out.println("Too high, give it another shot--");
         _hi = guess - 1;
       } else if(guess < _target){
+        System.out.println("Too low, give it another shot--");
         _lo = guess + 1;
       } else{
         System.out.println("Victory! Thou hast guessed correct, after a whopping " + _guessCtr + " tries");
