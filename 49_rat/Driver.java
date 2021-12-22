@@ -3,7 +3,6 @@ public class Driver {
     Rational a = new Rational(2, 3);
     Rational b = new Rational(1, 2);
     Rational c = new Rational(4, 18);
-    Object o = new Object();
 
     System.out.println("Testing add():");
     a.add(b);
@@ -22,7 +21,15 @@ public class Driver {
     System.out.println("\nTesting compareTo():");
     System.out.println(a.compareTo(b)); // positive integer
 
-    System.out.println("\nTesting compareTo():");
-    System.out.println(a.compareTo(o));
+    Integer x = 2;
+
+    // System.out.println("\nTesting compareTo():");
+    // System.out.println(a.compareTo(2));
+    // System.out.println(a.compareTo(x));
+
+    System.out.println("\nTesting equals():");
+    System.out.println(a.equals(2));
+    System.out.println(a.equals(x));
+    System.out.println(b.equals(0.5));
   }
 }

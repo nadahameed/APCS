@@ -85,15 +85,26 @@ public class Rational implements Comparable {
     denominator = denominator / gcd;
   }
 
-  // However, it changes the calling object
+  // comparing to a rational
   public int compareTo(Rational r){
     subtract(r);
     return numerator;
   }
 
   public int compareTo(Object o){
-    Rational r = (Rational)o;
-    subtract(r);
-    return numerator;
+    if(o instanceof Rational){ //if o is an instance of rational
+      Rational r = (Rational)o;
+      subtract(r);
+      return numerator;
+    }
+    throw new ClassCastException("input isn't a rational :(");
+  }
+
+  public boolean equals(Object o){
+    if(o instanceof Rational){
+      Rational r = (Rational)o;
+      return (numerator * r.denominator) == (r.numerator * denominator);
+    }
+  return false; //if o isn't a rational
   }
 }
