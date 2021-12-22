@@ -2,13 +2,16 @@
 // APCS
 // HW49: Rational Standards Compliance
 // 2021-12-22
-// time spent:
+// time spent: 0.7 hrs
 
 /*
 DISCO:
+- throw new ClassCastException returns your specified error message
+- Rational implements Comparable - Comparable is an interface
 
 QCC:
-
+- How specific/vague can exception errors be?
+- How many should we include (as a limit)?
 */
 
 public class Rational implements Comparable {
