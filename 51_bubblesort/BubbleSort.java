@@ -15,6 +15,8 @@
  * 4. Repeat 0 to 3 until there are no more swaps
  *
  * DISCO
+ * a for each loop is efficient for creating a copy
+ * in bubbleSortV, if there is only one for loop, the list will only go through one sort/pass
  *
  * QCC
  * q0: If a pass requires no swaps, what do you know?
