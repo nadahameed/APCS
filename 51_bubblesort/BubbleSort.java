@@ -1,8 +1,8 @@
-// Clyde "Thluffy" Sinclair
-// APCS pd0
+// TNPG: CNN - Corina Chen + Binktop, Nicole Zhou + Duck, Nada Hameed + Ray
+// APCS pd6
 // HW51 -- implementing bubblesort
 // 2022-01-04t
-// time spent:  hrs
+// time spent: 1 hrs
 
 /******************************
  * class BubbleSort -- implements bubblesort algorithm (vanilla)
@@ -66,6 +66,19 @@ public class BubbleSort
   public static void bubbleSortV( ArrayList<Comparable> data )
   {
     /* YOUR IMPLEMENTATION HERE */
+
+    //outside for loop allows for several passes
+    //if it didn't exist, there would only be one pass
+    for (int i = 0; i < data.size(); i++){
+      for (int x = data.size() - 1; x > i; x--){
+
+        if (data.get(x).compareTo(data.get(x - 1)) < 0){
+          Comparable subby = data.get(x);
+          data.set(x, data.get(x - 1));
+          data.set(x - 1, subby);
+        }
+      }
+    }
   }
 
 
@@ -75,13 +88,19 @@ public class BubbleSort
   public static ArrayList<Comparable> bubbleSort( ArrayList<Comparable> input )
   {
     /* YOUR IMPLEMENTATION HERE */
+    ArrayList subby = new ArrayList<Comparable>();
+    for (Comparable a : input){
+      subby.add(a);
+    }
+    bubbleSortV(subby);
+    return subby;
   }
 
 
   public static void main( String [] args )
   {
 
-    /*===============for VOID methods=============
+      /*===============for VOID methods=============
       ArrayList glen = new ArrayList<Integer>();
       glen.add(7);
       glen.add(1);
@@ -96,9 +115,10 @@ public class BubbleSort
       System.out.println( "ArrayList coco before sorting:\n" + coco );
       bubbleSortV(coco);
       System.out.println( "ArrayList coco after sorting:\n" + coco );
+
       ============================================*/
 
-    /*==========for AL-returning methods==========
+
       ArrayList glen = new ArrayList<Integer>();
       glen.add(7);
       glen.add(1);
@@ -118,6 +138,7 @@ public class BubbleSort
       + cocoSorted );
       System.out.println( "ArrayList coco after sorting:\n" + coco );
       System.out.println( coco );
+      /*==========for AL-returning methods==========
       ============================================*/
 
   }//end main
