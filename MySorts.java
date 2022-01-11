@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Sorts{
+public class MySorts{
 
 // Helper Functions:
   public static ArrayList populate( int size, int lo, int hi )
