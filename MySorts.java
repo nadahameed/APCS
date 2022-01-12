@@ -28,7 +28,7 @@ public class MySorts{
   }
 
 // Bubble Sort
-  public static void bubble(ArrayList<Comparable> ow) {
+  public static void bubbleSort(ArrayList<Comparable> ow) {
     //swap counter
     int swpcnt = 0;
     //comparison counter
@@ -57,7 +57,7 @@ public class MySorts{
   }
 
 // Selection Sort
-  public static void selection(ArrayList<Comparable> ow) {
+  public static void selectionSort(ArrayList<Comparable> ow) {
     //note: this version places greatest value at rightmost end,
 
     //maxPos will point to position of SELECTION (greatest value)
@@ -92,7 +92,7 @@ public class MySorts{
   }
 
 // Insertion sort
-  public static void insertion(ArrayList<Comparable> ow) {
+  public static void insertionSort(ArrayList<Comparable> ow) {
     //swap counter
     int swpcnt = 0;
     //comparison counter
