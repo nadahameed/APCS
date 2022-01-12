@@ -72,6 +72,8 @@ public class Magpie2
 		}
 		return response;
 	}
+	//To prioritize responses, order matters - put priority words first!
+	//When a keyword is included in another word (ex: smother), you'll still be asked about your mother - the letters are detected; not the word itself.
 
 	private int findKeyword(String statement, String goal,
 			int startPos)
