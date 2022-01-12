@@ -34,35 +34,35 @@ public class Magpie2
 		if ((statement.trim()).length() == 0){
 			response = "Don't be like that; talk to me!";
 		}
-		else if (statement.indexOf("no") >= 0)
+		else if (findKeyword(statement, "no") >= 0)
 		{
 			response = "Why so negative?";
 		}
-		else if (statement.indexOf("mother") >= 0
-				|| statement.indexOf("father") >= 0
-				|| statement.indexOf("sister") >= 0
-				|| statement.indexOf("brother") >= 0)
+		else if (findKeyword(statement, "mother") >= 0
+				|| findKeyword(statement, "father") >= 0
+				|| findKeyword(statement, "sister") >= 0
+				|| findKeyword(statement, "brother") >= 0)
 		{
 			response = "Tell me more about your family.";
 		}
-		else if (statement.indexOf("cat") >= 0
-				|| statement.indexOf("dog") >= 0)
+		else if (findKeyword(statement, "cat") >= 0
+				|| findKeyword(statement, "dog") >= 0)
 		{
 			response = "Tell me more about your pets.";
 		}
-		else if (statement.indexOf("Mykolyk") >= 0)
+		else if (findKeyword(statement, "Mykolyk") >= 0)
 		{
 			response = "Whoa, Mr. Mykolyk sounds amazing!";
 		}
-		else if (statement.indexOf("orange") >= 0)
+		else if (findKeyword(statement, "orange") >= 0)
 		{
 			response = "Orange is my third favorite color!";
 		}
-		else if (statement.indexOf("school") >= 0)
+		else if (findKeyword(statement, "school") >= 0)
 		{
 			response = "I think I stopped listening at 'school,' sorry.";
 		}
-		else if (statement.indexOf("rat") >= 0)
+		else if (findKeyword(statement, "rat") >= 0)
 		{
 			response = "You should turn back to your rat pack, tell them I'm trash ;)";
 		}
@@ -71,6 +71,50 @@ public class Magpie2
 			response = getRandomResponse(statement);
 		}
 		return response;
+	}
+
+	private int findKeyword(String statement, String goal,
+			int startPos)
+	{
+		String phrase = statement.trim().toLowerCase();
+		goal = goal.toLowerCase();
+
+		int psn = phrase.indexOf(goal, startPos);
+
+		while (psn >= 0)
+		{
+
+			String before = " ", after = " ";
+			if (psn > 0)
+			{
+				before = phrase.substring(psn - 1, psn);
+			}
+			if (psn + goal.length() < phrase.length())
+			{
+				after = phrase.substring(
+						psn + goal.length(),
+						psn + goal.length() + 1);
+			}
+
+			if (((before.compareTo("a") < 0) || (before
+					.compareTo("z") > 0)) // before is not a
+											// letter
+					&& ((after.compareTo("a") < 0) || (after
+							.compareTo("z") > 0)))
+			{
+				return psn;
+			}
+
+			psn = phrase.indexOf(goal, psn + 1);
+
+		}
+
+		return -1;
+	}
+
+	private int findKeyword(String statement, String goal)
+	{
+		return findKeyword(statement, goal, 0);
 	}
 
 	/**
