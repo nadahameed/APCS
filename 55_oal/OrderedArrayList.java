@@ -47,7 +47,7 @@ public class OrderedArrayList {
   // execution time: O(n) - it's a linear relationship because the number of iterations directly depends on the size of the list
   public Integer set(int index, int newVal){
     int oldVal = remove(index);
-    add(newVal);
+    addLinear(newVal);
     return oldVal;
   }
   
