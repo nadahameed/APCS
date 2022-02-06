@@ -1,8 +1,8 @@
-// Clyde "Thluffy" Sinclair
-// APCS pd0
+// Stack Underflow (Ariel Fuchs + Duck, Nada Hameed + Ray, Russell Goychayev + Duck)
+// APCS pd7
 // L05 -- pulling it together
 // 2022-02-03r
-// time spent:  hrs
+// time spent: 3 hrs
 
 /***
  * class StatPrinterApp

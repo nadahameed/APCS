@@ -1,8 +1,8 @@
-// Clyde "Thluffy" Sinclair
+// Stack Underflow (Ariel Fuchs + Duck, Nada Hameed + Ray, Russell Goychayev + Duck)
 // APCS pd7
 // L05 -- pulling it together
 // 2022-02-03r
-// time spent:  hrs
+// time spent: 3 hrs
 
 
 /**
@@ -64,20 +64,22 @@ public class StatPrinter
   //          _frequency.get(i) returns frequency of i in data
   //eg, for data [2,3,2,5,2,3]
   //  _frequency would be [0,0,3,2,0,1]
+
+  //runtime: O(n^2)
   public StatPrinter( ArrayList <Integer> data )
   {
     /* YOUR IMPLEMENTATION HERE */
     _frequency = new ArrayList <Integer> (max(data) + 1);
 
       int counter;
-      for (int i = 0; i > max(data)+1; i++){
+      for (int i = 0; i < max(data)+1; i++){
         counter = 0;
         for (int j = 0; j < data.size(); j++){
           if (data.get(j) == i){
             counter++;
           }
         }
-        _frequency.add(counter, i);
+        _frequency.add(counter);
       }
 
     //System.out.println(_frequency);
@@ -87,6 +89,8 @@ public class StatPrinter
   //*************** QUESTION 01 **************************
   //precond:  data.size() > 0
   //postcond: returns largest integer in data
+
+  //runtime: O(n)
   public Integer max( ArrayList <Integer> data )
   {
     /* YOUR IMPLEMENTATION HERE */
@@ -110,6 +114,8 @@ public class StatPrinter
   //    isLocalMode(0) -> false
   //    isLocalMode(1) -> true
   //    isLocalMode(5) -> true
+
+  //runtime: O(1)
   public boolean isLocalMode( int i )
   {
     /* YOUR IMPLEMENTATION HERE */
@@ -122,6 +128,8 @@ public class StatPrinter
 
   //*************** QUESTION 04 **************************
   //postcond: returns list of modes in _frequency
+
+  //runtime: O(n)
   public ArrayList<Integer> getLocalModes()
   {
     /* YOUR IMPLEMENTATION HERE */
@@ -137,6 +145,8 @@ public class StatPrinter
 
   //*************** QUESTION 05 **************************
   //precond:  longestBar > 0
+
+  //runtime: O(n^2)
   public void printHistogram( int longestBar )
   {
     /* YOUR IMPLEMENTATION HERE */

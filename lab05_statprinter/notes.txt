@@ -1,19 +1,20 @@
-Team Stack Underflow (Clyde Sinclair, Fierce Dragon)
+Team Stack Underflow (Ariel Fuchs + Duck, Nada Hameed + Ray, Russell Goychayev + Duck)
 APCS pd7
 L05 -- pulling it together
 2022-02-03r
-time spent:  hrs
+time spent: 3 hrs
 
 
 DISCO
 ------------------------------------------------
-*
+* we can use a counter to determine the frequency of each number
 ================================================
 
 
 QCC
 ------------------------------------------------
-*
+* most efficient way to round the ratio of dots to number of dots?
+* how helpful would it be to sort data?
 ================================================
 
 
