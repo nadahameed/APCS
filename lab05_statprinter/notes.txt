@@ -1,4 +1,4 @@
-Team Stack Underflow (Ariel Fuchs + Duck, Nada Hameed + Ray, Russell Goychayev + Duck)
+Team Stack Underflow (Ariel Fuchs + Skelly duckler, Nada Hameed + Ray, Russell Goychayev + Duck)
 APCS pd7
 L05 -- pulling it together
 2022-02-03r
@@ -20,5 +20,6 @@ QCC
 
 MISC
 ------------------------------------------------
-*
+* we worked through each part based on qs
+* mapped out each part on paper
 ================================================
