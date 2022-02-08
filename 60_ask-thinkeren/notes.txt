@@ -1,0 +1,24 @@
+TNPG: Stack Underflow (Nada Hameed, Ariel Fuchs, Russell Goychayev)
+APCS
+PD07
+2022-02-08
+
+DISCO:
+- the process gets messy as more people try and intervene (hence the rule that only thinkeren with cards can speak)
+- there are several ways to merge two sorted lists
+- our classmates struggled with how to deal with suits
+-> we came to the consensus that numbers have greater priority than suits
+
+QCC:
+- it may take a while for our class to achieve total silence while sorting
+- what's the best way to merge two sorted (or unsorted) lists (not specific to cards in the hands of 16-17yr olds)?
+
+THINKER FIRMWARE:
+- only thinkers with cards can speak
+- they can only speak to less than three other thinkeren
+- thinker with cards splits deck into two unless they have less than two cards or the cards are unsorted
+- they pass cards to two other thinkeren and hold out their hands, signifying that they are waiting for two sorted decks to be handed back to them
+- if one has less than two cards, they have a sorted card!
+- if the cards in a thinker's hand are sorted, they pass them back to the thinker who handed it to them
+- only pass back cards if they are sorted
+- return cards to Mr. Mykolyk
