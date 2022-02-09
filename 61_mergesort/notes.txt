@@ -1,0 +1,20 @@
+TNPG: Stack Underflow (Ariel Fuchs + Skelly duckler, Russell Goychayev + Duck, Nada Hameed + Ray)
+APCS pd7
+HW61 -- merge sort
+2022-02-08m
+time spent: 1.5 hrs
+
+
+DISCO
+------------------------------------------------
+* we must use two separate counters for the two arrays
+* once all the elements of an array are added, just add the remaining elements of the other array
+* sort: split the array into two and merge
+-> similar to card decks
+================================================
+
+
+QCC
+------------------------------------------------
+* how can we relate this to divvying up the work between turtles in class?
+================================================
