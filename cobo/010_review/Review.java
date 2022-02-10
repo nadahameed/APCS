@@ -163,12 +163,29 @@ public class Review {
     }
   }
 
+  public static double totalSentiment(String fileName){
+    String word = textToString(fileName);
+    try
+    {
+      return sentiment.get(word.toLowerCase());
+    }
+    catch(Exception e)
+    {
+      return 0;
+    }
+  }
+
   public static void main(String[] args){
+    System.out.println("==========\nsentimentVal");
     System.out.println(sentimentVal("happily"));
     System.out.println(sentimentVal("terrible"));
     System.out.println(sentimentVal("cold"));
-    System.out.println(sentimentVal("drenched"));
-    System.out.println(sentimentVal("a"));
     System.out.println(sentimentVal("orange"));
+    System.out.println(sentimentVal("cat"));
+    System.out.println(sentimentVal("outlandish"));
+    System.out.println("\n\n==========\ntotalSentiment");
+    System.out.println(totalSentiment("SimpleReview.txt"));
+
+
   }
 }
