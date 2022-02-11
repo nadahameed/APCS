@@ -181,18 +181,22 @@ public class Review {
     if (woody < 0){
       return 1;
     }
-    else if (woody < 3){
+    else if (woody < 10){
       return 2;
     }
-    else if (woody < 6){
+    else if (woody < 20){
       return 3;
     }
-    else if (woody < 9){
+    else if (woody < 30){
       return 4;
     }
     else{
       return 5;
     }
+  }
+
+  public static void sorting(String fileName){
+    for(int i = 0; i < fileName.length; )
   }
 
   // tests code, as instructed by student guide
@@ -205,7 +209,12 @@ public class Review {
     System.out.println(sentimentVal("cat"));
     System.out.println(sentimentVal("outlandish"));
     System.out.println("\n==========\ntotalSentiment");
+    System.out.println("simple review");
     System.out.println(totalSentiment("SimpleReview.txt"));
+    System.out.println(starRating("SimpleReview.txt"));
+    System.out.println("bakery review");
     System.out.println(totalSentiment("BakeryReview.txt"));
+    System.out.println(starRating("BakeryReview.txt"));
+
   }
 }

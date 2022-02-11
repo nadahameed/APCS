@@ -1,0 +1,29 @@
+Activity 1:
+
+1.
+  a. sentimentVal (String word)
+  b. yes, it requires a String parameter - if you pass different type of parameter, there is an error message, because other methods used require String as well
+  c. yes, the return type is double
+
+2.
+  sentimentVal("orange") => 0.32
+  sentimentVal("cat") => -1.86
+  sentimentVal("outlandish") => 0.0
+3.
+  a. it would compile because the output is a double, and the input is a String
+  b. it would not compile because the output is a String and the input is a double - it should be double and String
+  c. it would not compile because there are two inputs, whereas sentimentVal requires one String input
+
+Activity 2:
+
+4.
+  totalSentiment looks through the file, and searches for spaces. Once it finds a space through iteration, it will register the previous letters as a word, and will find the sentimentVal for that word. It will then remove that word from the inputted String, and continue iterating through, summing up the sentimentVals in the process. Once there is nothing left in the String input, the totalSentiment is returned.
+
+5.
+  a. the ratings don't really make sense because the totalSentiment value has to be really high in order to get a good star rating.
+  b. in totalSentiment, we could perhaps multiply the totalSentiment value by some factor r, like 5 or 10.
+
+6.
+  the logical flaw in his code is that no matter what the totalSentiment value is, if it's less than 15, be it 0 or 14, the star rating will be 4. He was working backwards in his code, so to fix it, just order the numbers in the if statements from least to greatest.
+
+Activity 3:
