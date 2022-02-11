@@ -37,7 +37,7 @@ public class Review {
       Scanner input = new Scanner(new File("positiveAdjectives.txt"));
       while(input.hasNextLine()){
         String temp = input.nextLine().trim();
-        System.out.println(temp);
+        // System.out.println(temp);
         posAdjectives.add(temp);
       }
       input.close();
@@ -164,23 +164,38 @@ public class Review {
   }
 
   public static double totalSentiment(String fileName){
-    String phrase = removePunctuation(textToString(fileName));
-    double shwoop = 0;
+    double total = 0;
     String woody = "";
-
-    while (phrase.length() > 0){
-      woody = phrase.substring(0, phrase.indexOf(" "));
-      shwoop += sentimentVal(woody);
-      phrase = phrase.substring(woody.indexOf(" ") + 1);
+    String phrase = textToString(fileName);
+    //review += " ";
+    while (phrase.length() > 0 && phrase.indexOf(" ") > -1){
+      woody = removePunctuation(phrase.substring(0, phrase.indexOf(" ")));
+      phrase = phrase.substring(phrase.indexOf(" ") + 1);
+      total += sentimentVal(woody);
     }
-    return shwoop;
+    return total;
   }
 
-  // public static int starRating(String fileName){
-  //   double total = totalSentiment(fileName);
-  //   if
-  // }
+  public static int starRating(String fileName){
+    double woody = totalSentiment(fileName);
+    if (woody < 0){
+      return 1;
+    }
+    else if (woody < 3){
+      return 2;
+    }
+    else if (woody < 6){
+      return 3;
+    }
+    else if (woody < 9){
+      return 4;
+    }
+    else{
+      return 5;
+    }
+  }
 
+  // tests code, as instructed by student guide
   public static void main(String[] args){
     System.out.println("==========\nsentimentVal");
     System.out.println(sentimentVal("happily"));
@@ -191,7 +206,6 @@ public class Review {
     System.out.println(sentimentVal("outlandish"));
     System.out.println("\n==========\ntotalSentiment");
     System.out.println(totalSentiment("SimpleReview.txt"));
-
-
+    System.out.println(totalSentiment("BakeryReview.txt"));
   }
 }
