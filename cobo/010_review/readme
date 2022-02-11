@@ -20,3 +20,12 @@ Activity 1:
   c. it would not compile because there are two inputs, whereas sentimentVal requires one String input
 
 Activity 2:
+
+4.
+  totalSentiment looks through the file, and searches for spaces. Once it finds a space through iteration, it will register the previous letters as a word, and will find the sentimentVal for that word. It will then remove that word from the inputted String, and continue iterating through, summing up the sentimentVals in the process. Once there is nothing left in the String input, the totalSentiment is returned.
+
+5.
+  a.
+  b.
+
+6.

@@ -164,16 +164,22 @@ public class Review {
   }
 
   public static double totalSentiment(String fileName){
-    String word = textToString(fileName);
-    try
-    {
-      return sentiment.get(word.toLowerCase());
+    String phrase = removePunctuation(textToString(fileName));
+    double shwoop = 0;
+    String woody = "";
+
+    while (phrase.length() > 0){
+      woody = phrase.substring(0, phrase.indexOf(" "));
+      shwoop += sentimentVal(woody);
+      phrase = phrase.substring(woody.indexOf(" ") + 1);
     }
-    catch(Exception e)
-    {
-      return 0;
-    }
+    return shwoop;
   }
+
+  // public static int starRating(String fileName){
+  //   double total = totalSentiment(fileName);
+  //   if
+  // }
 
   public static void main(String[] args){
     System.out.println("==========\nsentimentVal");
@@ -183,7 +189,7 @@ public class Review {
     System.out.println(sentimentVal("orange"));
     System.out.println(sentimentVal("cat"));
     System.out.println(sentimentVal("outlandish"));
-    System.out.println("\n\n==========\ntotalSentiment");
+    System.out.println("\n==========\ntotalSentiment");
     System.out.println(totalSentiment("SimpleReview.txt"));
 
 
