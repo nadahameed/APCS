@@ -1,3 +1,5 @@
+//Team Stack Underflow (Nada Hameed + Ray, Ariel Fuchs + Skelly duckler, Russell Goychayev + Duck)
+
 import java.util.Scanner;
 import java.io.File;
 import java.util.HashMap;
@@ -207,8 +209,8 @@ public class Review {
       word = review.substring(review.indexOf("*"), review.indexOf(" "));
       punc = getPunctuation(word);
       word = removePunctuation(word);
-      System.out.println("word: " + word + "//");
-      if (sentimentVal(word.substring(1)) > 0){
+      //System.out.println("word: " + word + "//");
+      if (sentimentVal(word) > 0){
         fake = fake + randomPositiveAdj() + punc;
         review = review.substring(review.indexOf(" "));
       } else {
@@ -217,7 +219,7 @@ public class Review {
       }
     }
 
-    return fake;
+    return fake + review;
   }
 
   // tests code, as instructed by student guide
@@ -241,7 +243,7 @@ public class Review {
     System.out.println("\n==========\nfakeReview");
     System.out.println("----simple review");
     System.out.println(fakeReview("SimpleReview.txt"));
-    //System.out.println("----bakery review");
-    //System.out.println(fakeReview("BakeryReview.txt"));
+    System.out.println("----bakery review");
+    System.out.println(fakeReview("BakeryReview.txt"));
   }
 }

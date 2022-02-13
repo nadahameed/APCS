@@ -1,3 +1,5 @@
+Team Stack Underflow (Nada Hameed + Ray, Ariel Fuchs + Skelly duckler, Russell Goychayev + Duck)
+
 Activity 1:
 
 1.
@@ -38,3 +40,21 @@ Activity 3:
   to create either a fake positive or fake negative review, we could check the sentimentVal of each adjective.
 
 Activity 4:
+
+1.
+  a negative review could be generated to try and worsen the reputation of your competitor.
+
+2.
+  a positive review could be generated to support your own business, or let others know that you like their food/products without having to spend time on it.
+
+3.
+  to create a more positive or more negative review, take the sentimentVal of each adjective and if it's greater than zero, choose a positive adjective, and if it's less than or equal to zero, choose a negative adjective. perhaps it'd be helpful to include a list of noncommittal adjectives in case an adjective in the original review isn't in cleanSentiment.
+
+5.
+  the result is the original word without the first character.
+
+6.
+  it's necessary to remove the "*" so that the while loop will eventually stop, because if it's never removed, the while loop will go on and on.
+
+7.
+  to create a super positive review, one could create a new list of super positive adjectives, and then compare with a certain sentimentVal. Another option is including two positive adjectives in the place of one.
