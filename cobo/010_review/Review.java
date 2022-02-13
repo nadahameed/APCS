@@ -196,17 +196,28 @@ public class Review {
   }
 
   public static String fakeReview(String fileName){
-    String review = textToString(fileName);
-    String temp = "";
-    for(int i = 1; i < review.length()-1; i++){
-      if(review.substring(i, i+1).equals("*")){
-        temp = randomAdjective();
-        String word = review.substring(i);
-        word = word.substring(0, word.indexOf(" "));
-        review.replace(word, temp);
+    String review = textToString(fileName) + " ";
+    String fake = "";
+    String punc = "";
+    String word = "";
+
+    while (review.indexOf("*") > -1 && review.indexOf(" ") > -1){
+      fake = fake + review.substring(0, review.indexOf("*"));
+      review = review.substring(review.indexOf("*"));
+      word = review.substring(review.indexOf("*"), review.indexOf(" "));
+      punc = getPunctuation(word);
+      word = removePunctuation(word);
+      System.out.println("word: " + word + "//");
+      if (sentimentVal(word.substring(1)) > 0){
+        fake = fake + randomPositiveAdj() + punc;
+        review = review.substring(review.indexOf(" "));
+      } else {
+        fake = fake + randomNegativeAdj() + punc;
+        review = review.substring(review.indexOf(" "));
       }
     }
-    return review;
+
+    return fake;
   }
 
   // tests code, as instructed by student guide
@@ -230,7 +241,7 @@ public class Review {
     System.out.println("\n==========\nfakeReview");
     System.out.println("----simple review");
     System.out.println(fakeReview("SimpleReview.txt"));
-    System.out.println("----bakery review");
-    System.out.println(fakeReview("BakeryReview.txt"));
+    //System.out.println("----bakery review");
+    //System.out.println(fakeReview("BakeryReview.txt"));
   }
 }

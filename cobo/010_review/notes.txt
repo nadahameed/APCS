@@ -27,3 +27,14 @@ Activity 2:
   the logical flaw in his code is that no matter what the totalSentiment value is, if it's less than 15, be it 0 or 14, the star rating will be 4. He was working backwards in his code, so to fix it, just order the numbers in the if statements from least to greatest.
 
 Activity 3:
+
+3.
+  indexOf gets the index of the first instance of a certain character. substring takes a piece of a String, either between two indices or from one index to the end. With these methods, one can split a String based on the character they want to split it at. It's necessary to add " " in order to locate where to split/stop.
+
+5.
+  static methods do not require an instance of a class, whereas non-static methods do. for example: in a non-static method, create Object x, and then perform x.add(num 1, num 2), whereas for a static method, it'd be add(num 1, num 2).
+
+6.
+  to create either a fake positive or fake negative review, we could check the sentimentVal of each adjective.
+
+Activity 4:
