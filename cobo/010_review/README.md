@@ -18,13 +18,13 @@ errata:
 * what to do for activity 5?
 
 #### timeline:
-  day 1:
-    * activity 1 and starRating in activity 2
-  day 2:
-    * finished activity 2, started negative and positive adjectives in activity 3/4
-  weekend:
-    * finished activities 3 and 4
-    * brainstormed and finished activity 5
+  day 1
+* activity 1 and starRating in activity 2
+  day 2
+* finished activity 2, started negative and positive adjectives in activity 3/4
+  weekend
+* finished activities 3 and 4
+* brainstormed and finished activity 5
 
 #### questions:
 * what are hashmaps?
