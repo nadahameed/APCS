@@ -58,3 +58,25 @@ Activity 4:
 
 7.
   to create a super positive review, one could create a new list of super positive adjectives, and then compare with a certain sentimentVal. Another option is including two positive adjectives in the place of one.
+
+Activity 5:
+
+1.
+  word scrambling is pretty interesting - it could be pretty useful if we wanted to make a game.
+
+2.
+  first, we started with a simple idea: word shuffling. Then we thought about what else we could add just to be a bit more representative of the idea. It's still very simple, but it's interesting to see the statistics.
+
+3.
+  public static String wordScramble(String word) --> this takes in a String, which is the word to be shuffled. The return type is also a String, the shuffled version of the input. It's a static method for ease of use - this way, we don't have to create a shuffle or something.
+
+4.
+  word = word.substring(0, x - 1) + word.substring(x); --> this alters the original word so that when shuffling, the same letter isn't used in the shuffling, unless it occurs more than once in the word.
+  double percent = (100.0*simcntr/word.length()); --> this compares the shuffled word and the original word to see how similar they are
+
+5.
+  if (shuffled.substring(i, i+1).equals(word.substring(i, i+1))){ --> this checks to see whether a character in the original word is in the same position in the shuffled word
+  
+6.
+  while (word.length() > 0){ --> the method iterates through and adds to the shuffled word, but of course it can't go past the original word's length.
+  for (int i = 0; i < word.length(); i++){ --> this is the alternative to using a while loop, but a while loop seems more convenient.
