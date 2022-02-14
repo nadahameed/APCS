@@ -4,10 +4,10 @@ errata:
 * nothing else should seem too unfamiliar to a Thinker
 
 ## Team Stack Underflow (Nada Hameed + Ray, Ariel Fuchs + Skelly duckler, Russell Goychayev + Duck)
-#### APCS PD07
-#### L06 - Read/Review/Expand - consumer review cobo lab
-#### 2022-02-14
-#### time spent: 2.5 hours
+* APCS PD07
+* L06 - Read/Review/Expand - consumer review cobo lab
+* 2022-02-14
+* time spent: 2.5 hours
 
 #### note: couldn't include tnpg in txt files :)
 
