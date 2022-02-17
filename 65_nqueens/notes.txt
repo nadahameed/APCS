@@ -1,0 +1,8 @@
+DISCOS:
+- _board.length returns the length of the row
+- methods look to the right of the queen -> must start at top left
+- utilizes recursion (aha cb!)
+
+QCCS:
+- optimal queen placing?
+- do we need a helper method?
