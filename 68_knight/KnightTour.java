@@ -71,8 +71,8 @@ public class KnightTour
 
     //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     //for random starting location, use lines below:
-    //int startX = (int)(Math.random()*n);
-    //int startY = (int)(Math.random()*n);
+    //int startX = 2+(int)(Math.random()*n);
+    //int startY = 2+(int)(Math.random()*n);
     //tf.findTour( startX, startY, 1 );   // 1 or 0 ?
     //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -105,12 +105,16 @@ class TourFinder
     //               -1 for cell in moat
     //---------------------------------------------------------
     for(int i = 0; i < _board.length; i++){
+      //fill in first 2 rows
       _board[0][i] = -1;
       _board[1][i] = -1;
+      //last 2 rows
       _board[n + 2][i] = -1;
       _board[n + 3][i] = -1;
+      //first 2 col
       _board[i][0] = -1;
       _board[i][1] = -1;
+      //last 2 col
       _board[i][n + 2] = -1;
       _board[i][n + 3] = -1;
     }
@@ -169,7 +173,7 @@ class TourFinder
     if ( _solved ) System.exit(0);
 
     //primary base case: tour completed
-    if ( moves == (_board.length-4)*(_board.length-4)+1) {
+    if ( moves == (_board.length-4)*(_board.length-4)+1) { //if (moves>_sideLength*_sideLength)
       _solved = true;
       System.out.println( this ); //refresh screen
       return;
@@ -187,7 +191,7 @@ class TourFinder
 
       System.out.println( this ); //refresh screen
 
-      //delay(1000); //uncomment to slow down enough to view
+      delay(1000); //uncomment to slow down enough to view
 
       /******************************************
        * Recursively try to "solve" (find a tour) from
