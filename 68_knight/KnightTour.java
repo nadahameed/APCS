@@ -2,7 +2,7 @@
 // APCS pd7
 // HW68 -- recursively probing for a closed cycle
 // 2022-02-28m
-// time spent: 1 hrs + class time
+// time spent:  1 hr + class time
 
 /***
  * SKELETON
@@ -19,14 +19,19 @@
     -> if you can't move the knight further while there are empty squares, go back one move, and try another possibility
     -> repeat the last two steps until the board has been entirely traversed by the knight once/sq
  * DISCO
+    - use Math.random() to have a random starting position
+    - big O of n^2
  *
  * QCC
+    - pushing farther not complete
+    - why does it take more time sometimes even though the computer follows the same pattern?
+    - larger boards are very taxing to the computer!
  *
  * Mean execution times for boards of size n*n:
- * n=5   __s    across __ executions
- * n=6   __s    across __ executions
- * n=7   __s    across __ executions
- * n=8   __s    across __ executions
+ * n=5   3.97s    across 4 executions (4.03, 3.75, 4.13, 3.97)
+ * n=6   30.67s    across 1 executions
+ * n=7   1142.03s    across 1 executions
+ * n=8   1496.31s    across 1 executions
  *
  * POSIX PROTIP: to measure execution time from BASH, use time program:
  * $ time java KnightTour 5
