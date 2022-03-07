@@ -1,8 +1,8 @@
-// Clyde Sinclair
-// APCS pd0
-// HW69 -- maze solving (blind, depth-first)
-// 2022-03-03r
-// time spent:  hrs
+// Team PigeonHaters -- Nina Jiang, Samantha Hua, Nada Hameed
+// APCS pd7
+// HW70: Thinkers of the Corn
+// 2022-03-07
+// time spent: 1 hrs
 
 /***
  * SKEELTON for
@@ -15,12 +15,15 @@
  * (mazefile is ASCII representation of a maze, using symbols below)
  *
  * ALGORITHM for finding exit from starting position:
- *  <INSERT YOUR SUMMARY OF ALGO HERE>
+ *  Similar to KnightTour, we would check if there are available moves from the current position of the hero with left side preference clockwise. We would only need a moat of depth 1 since the hero would only move 1 space at a time. If the hero reaches a dead end, it would backtrack and reset the '.' to '#'. There are only 4 recursive calls since the hero can only move horizontally or vertically. The program ends when the hero reaches the space marked with '$'.
  *
- * DISCO
+ * DISCO:
+ *  When we changed the if statements in solve() to else-ifs the hero was able to reach the exit.
+ *  You can put two classes within the same file.
  *
- * QCC
- *
+ * QCC:
+ *  We created accessor methods for h and w - was that necessary and was it inefficient?
+ *  Why did using else-ifs instead of ifs work in the solve() method?
  ***/
 
 //enable file I/O
@@ -128,30 +131,54 @@ class MazeSolver
   public void solve( int x, int y )
   {
     delay( FRAME_DELAY ); //slow it down enough to be followable
-
+    delay(100);
     //primary base case
     if ( _solved ) {
-	     System.exit(0);
+	    System.exit(0);
     }
     //other base cases
-    else if ( !(_maze[x][y].equals('#'))) {
-	???
+    else if (_maze[x][y] == EXIT) {
+      _solved = true;
       return;
     }
     //otherwise, recursively solve maze from next pos over,
     //after marking current location
     else {
-	???
+      _maze[x][y] = HERO;
       System.out.println( this ); //refresh screen
 
-???
+      if (_maze[x][y + 1] == PATH) {
+        solve(x, y + 1); // north
+      }
+
+      else if (_maze[x + 1][y] == PATH) {
+        solve(x + 1, y); // east
+      }
+
+      else if (_maze[x][y - 1] == PATH) {
+        solve(x, y - 1); // south
+      }
+
+      else if (_maze[x - 1][y] == PATH) {
+        solve(x - 1, y); // west
+      }
+
+      _maze[x][y] = VISITED_PATH;
       System.out.println( this ); //refresh screen
     }
   }
 
   //accessor method to help with randomized drop-in location
-  public boolean onPath( int x, int y) {
+  public boolean onPath( int x, int y ) {
+    return _maze[x][y] == PATH;
+  }
 
+  public int h(){
+    return h;
+  }
+
+  public int w(){
+    return w;
   }
 
 }//end class MazeSolver
@@ -161,6 +188,7 @@ public class Maze
 {
   public static void main( String[] args )
   {
+
     String mazeInputFile = null;
 
     try {
@@ -182,11 +210,19 @@ public class Maze
 
     //drop hero into the maze (coords must be on path)
     // ThinkerTODO: comment next line out when ready to randomize startpos
-    ms.solve( 4, 3 );
+    //ms.solve( 4, 3 );
 
     //drop our hero into maze at random location on path
     // YOUR RANDOM-POSITION-GENERATOR CODE HERE
-    //ms.solve( startX, startY );
+    int startX = (int)(ms.w() * Math.random());
+    int startY = (int)(ms.h() * Math.random());
+
+    while(!ms.onPath(startX, startY)){
+      startX = (int)(ms.w() * Math.random());
+      startY = (int)(ms.h() * Math.random());
+    }
+
+    ms.solve( startX, startY );
     /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
   }//end main()
