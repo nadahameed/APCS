@@ -1,0 +1,46 @@
+// TNPG: Stack Underflow: Nada Hameed + Ray, Ariel Fuchs + Skelly duckler, Russell Goychayev + Duck
+// APCS pd7
+// HW71 -- Reading for intent, tracing for VICTORY
+// 2022-03-07m
+// time spent: 0.5 hrs + class
+
+/***
+ * SKEELTON for
+ * class Mysterion
+ * tests preliminary hypotheses re: utility of mystery algo
+ *
+ * <h1>It's a Bird, It's a Plane! It's.... MYSTERION</h1>
+ * The Mysterion method ... <YOUR TRIO'S DESCRIPTION HERE>
+ * <p>
+ * <b>Note:</b> BLAH blah blah, yakkety schmakketty...
+ * @author  Trey Parker, Matt Stone
+ * @version 3.1415926535897932384626433
+ * @since   2022-03-07m
+ *
+ * algo as pseudocode:
+ * ------------------------------
+ *     v = arr[c]
+ *     swap arr[c], arr[b]
+ *     s = a
+ *     for i in [a..b-1]
+ *         if arr[i] < v
+ *             swap arr[s], arr[i]
+ *             s+=1
+ *     swap arr[b], arr[s]
+ *
+ * DISCO
+  - like we discussed in class, v is a kind of splitter
+  - a: lower limit, b: upper limit, c: where do you split (affects v)
+ *
+ * QCC
+ * - what's its purpose???
+
+ * q0: What does it do?
+ * a0: based on what v is, the array is sorted separately in the left and right
+    -> right: greater than v
+    -> left: less than v
+    - very vague sorting?
+ *
+ * q1: O(?)
+ * a1: 0(n) -> traverses the array, swaps within and outside of a for loop
+ *
