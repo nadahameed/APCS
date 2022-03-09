@@ -84,15 +84,11 @@ public class FastSelect{
     return s;
   }//end mysterion
 
-  // public int smallestElement(int[] arr, int start, int end, int y){
-  //   // int c = 0;
-  //   // partition(arr, 0, arr.length-1, c);
-  // }
 
   public static int smallestElement(int[] arrayCake, int y){
     int start = 0;
     int end = arrayCake.length-1;
-    int pivot = end / 2;
+    int pivot = 0;
 
     pivot = partition(arrayCake, start, end, pivot);
     while (pivot != y){
