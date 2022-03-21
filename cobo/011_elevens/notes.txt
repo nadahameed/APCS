@@ -1,4 +1,18 @@
-Notes
+Maine Lobsters: Samantha Hua, Ruby Friedman, Nada Hameed
+APCS
+L07: But These Go Up To Eleven
+2022-03-20
+time spent: 5 hrs.
+
+DISCO:
+ - java -ea fileName enables assertions when running the file
+ - assert booleanExpression : StringExpression --> if the booleanExpression
+   is false, the StringExpression is returned
+ - saw a useful implementation of the super() constructor. it allowed us to initialize
+ 	 instance variables in another file and assign them values from our current file.
+
+QCC:
+ - Does the AP exam have this much reading ? :(
 
 Activity 2:
 - we struggled with the syntax of constructor Deck
@@ -90,3 +104,43 @@ Activity 7:
 				}
 			}
 		e. anotherPlayIsPossible must call cardIndexes earlier in order to see what the available indexes are to run containsPairSum11 or containsJQK.
+
+
+Activity 8:
+ - questions:
+ 	 1. thirteens:
+	 			- uses a 10 card board
+				- jack, queen have values of 11, 12, respectively.
+				- pairs that add up to 13 are removed
+				- kings are removed
+				- probability of winning is 1 out of 2
+
+	 		tens:
+				- uses a 13 card Board
+				- pairs that add up to 10 are removed
+				- quartets of face cards + tens are removed
+				- probability of winning is 1 out of 8
+
+			elevens:
+				- uses a 9 card board
+				- pairs that add up to 11 are removed
+				- ace is worth 1
+				- face cards are removed
+
+ 	 2. The ElevensBoard uses the super() constructor so that runs the constructor
+	 		within Board.java and initializes those instance variables. The values in
+			the ElevensBoard are passed into the constructor of Board so the instance
+			variables have the values from ElevensBoard.
+
+ 	 3. While there is no code within those methods, the comments above them
+	 		describe what they do. It seems like the purpose of those methods are the
+			same for all three games but it is necessary to change the specific values
+			that pairs add up to because that is the difference between the games.
+
+Activity 9:
+ 	 1. size is not an abstract method because it is an instance variable not a method.
+	 2. We do not want to remove cards from the array because it would not allow us
+	 		to rerun the algorithm.
+	 3. I think both would work because they are both abstract. They outline the
+	 		methods that a class file can expect but in both cases, they must be
+			overwritten in order to compile.
