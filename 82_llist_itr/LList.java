@@ -154,9 +154,9 @@ public class LList<T> implements List<T> //Q: Why no "implements Iterable" ?
 
 
   //return an Iterator over this list
-  public class InnerIterator
+  public class Iterator InnerIterator //must be type Iterator
   {
-    
+    /* YOUR CODE HERE */
   }
 
   //--------------------------------------------------------
@@ -256,7 +256,8 @@ public class LList<T> implements List<T> //Q: Why no "implements Iterable" ?
     //constructor
     public MyIterator()
     {
-      /* YOUR CODE HERE */
+      _dummy = new DLLNode(null, null, _head); //initializes _dummy
+      _okToRemove = false;
     }
 
     //-----------------------------------------------------------
@@ -264,7 +265,10 @@ public class LList<T> implements List<T> //Q: Why no "implements Iterable" ?
     //return true if iteration has more elements.
     public boolean hasNext()
     {
-      /* YOUR CODE HERE */
+      if (_dummy.getNext() == null){
+        return false;
+      }
+      return true;
     }
 
 
