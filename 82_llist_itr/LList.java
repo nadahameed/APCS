@@ -1,4 +1,18 @@
 /***
+TNPG: Hot Cakes - Samantha Hua + Poppy, Ariel Fuchs + Skelly Duckler, Nada Hameed + Ray
+APCS
+HW82 -- Roll Your Own Iterator
+2022-03-28
+time spent: 1.25 hours
+
+DISCO:
+- if a class implements Iterator then we know an instance of that class is iterable
+- okToRemove is necessary because it shows us that we have moved on to the next item in the iterable collection
+
+QCC:
+- why is it important that we import NoSuchElementException?
+
+
  * class LList v6
  * Implements a linked list of DLLNodes.
  * Version 06 is iterable via FOREACH loop
@@ -154,9 +168,8 @@ public class LList<T> implements List<T> //Q: Why no "implements Iterable" ?
 
 
   //return an Iterator over this list
-  public class Iterator InnerIterator //must be type Iterator
-  {
-    /* YOUR CODE HERE */
+  public MyIterator iterator() {
+    return new MyIterator();
   }
 
   //--------------------------------------------------------
@@ -256,7 +269,7 @@ public class LList<T> implements List<T> //Q: Why no "implements Iterable" ?
     //constructor
     public MyIterator()
     {
-      _dummy = new DLLNode(null, null, _head); //initializes _dummy
+      _dummy = _head; //initializes _dummy
       _okToRemove = false;
     }
 
@@ -275,7 +288,12 @@ public class LList<T> implements List<T> //Q: Why no "implements Iterable" ?
     //return next element in this iteration
     public T next()
     {
-      /* YOUR CODE HERE */
+      if(hasNext()){
+        _okToRemove = true;
+        return _dummy.getNext().getCargo();
+      } else {
+        return null;
+      }
     }
 
 
@@ -284,7 +302,13 @@ public class LList<T> implements List<T> //Q: Why no "implements Iterable" ?
     //               (...so that hasNext() will not crash)
     public void remove()
     {
-            /* YOUR CODE HERE */
+      if(_okToRemove){
+        DLLNode<T> nodeBeforePrevNode = _dummy.getPrev().getPrev();
+        _dummy.setPrev(nodeBeforePrevNode);
+
+        _dummy.getPrev().setNext(_dummy);
+
+      }
     }
     //--------------^  Iterator interface methods  ^-------------
     //-----------------------------------------------------------
@@ -295,7 +319,6 @@ public class LList<T> implements List<T> //Q: Why no "implements Iterable" ?
   //main method for testing
   public static void main( String[] args )
   {
-    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     LList james = new LList();
 
     System.out.println("initially: " );
@@ -338,6 +361,7 @@ public class LList<T> implements List<T> //Q: Why no "implements Iterable" ?
 
     System.out.println( "...after remove(0): " + james.remove(0) );
     System.out.println( james + "\tsize: " + james.size() );
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
   }//end main()
 
