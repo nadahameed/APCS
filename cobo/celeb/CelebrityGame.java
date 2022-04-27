@@ -27,7 +27,7 @@ public class CelebrityGame
 	public CelebrityGame()
 	{
 		celebGameList = new ArrayList<Celebrity>();
-		// gameWindow = new CelebrityFrame(this);
+		gameWindow = new CelebrityFrame(this);
 	}
 
 	/**
@@ -36,7 +36,7 @@ public class CelebrityGame
 	public void prepareGame()
 	{
 		celebGameList = new ArrayList<Celebrity>();
-		// gameWindow.replaceScreen("START");
+		gameWindow.replaceScreen("START");
 	}
 
 	/**
@@ -49,7 +49,18 @@ public class CelebrityGame
 	 */
 	public boolean processGuess(String guess)
 	{
-		return (guess.equals(gameCelebrity.getAnswer()));
+		boolean matches = false;
+
+		if (guess.trim().equalsIgnoreCase(gameCelebrity.getAnswer()))
+		{
+			matches = true;
+			celebGameList.remove(0);
+			if (celebGameList.size() > 0)
+			{
+				gameCelebrity = celebGameList.get(0);
+			}
+		}
+			return matches;
 	}
 
 	/**
@@ -59,10 +70,15 @@ public class CelebrityGame
 	 */
 	public void play()
 	{
-		if (celebGameList.size() != 0) {
-			return;
-		}
-		gameCelebrity = celebGameList.get(0);
+		if (celebGameList != null && celebGameList.size() > 0L )
+		{
+			this.gameCelebrity = celebGameList.get(0);
+			gameWindow.replaceScreen("GAME");
+	}
+	// 	if (celebGameList.size() != 0) {
+	// 		return;
+	// 	}
+	// 	gameCelebrity = celebGameList.get(0);
 	}
 
 	/**
@@ -77,8 +93,21 @@ public class CelebrityGame
 	 */
 	public void addCelebrity(String name, String guess, String type)
 	{
-		Celebrity temp = new Celebrity(name, guess);
-		celebGameList.add(temp);
+		// Celebrity temp = new Celebrity(name, guess);
+		// celebGameList.add(temp);
+		/*
+* HHow would you add other subclasses to this CelebrityGame?
+*/
+		Celebrity currentCelebrity;
+		if (type.equals("Literature"))
+		{
+			currentCelebrity = new LiteratureCelebritSy(name, guess);
+		}
+		else //Add an else if here
+		{
+			currentCelebrity = new Celebrity(name, guess);
+		}
+		this.celebGameList.add(currentCelebrity);
 	}
 
 	/**
