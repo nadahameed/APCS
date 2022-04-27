@@ -1,5 +1,3 @@
-//TNPG: Hot Cake: Ariel, Nada, Samantha
-
 /**
  * Celebrity base class for the Celebrity game.
  * @author cody.henrichsen

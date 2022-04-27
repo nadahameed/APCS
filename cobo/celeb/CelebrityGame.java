@@ -1,5 +1,3 @@
-//TNPG: Hot Cake: Ariel, Nada, Samantha
-
 import java.util.ArrayList;
 
 /**
@@ -17,7 +15,7 @@ public class CelebrityGame
 	 /**
 	 * The GUI frame for the Celebrity game.
 	 */
-	 private CelebrityFrame gameWindow;
+	 // private CelebrityFrame gameWindow;
 	/**
 	 * The ArrayList of Celebrity values that make up the game
 	 */
@@ -28,9 +26,8 @@ public class CelebrityGame
 	 */
 	public CelebrityGame()
 	{
-		//celebGameList = new ArrayList<Celebrity>
-		gameWindow = new CelebrityFrame(this);
-		// gameCelebrity =
+		celebGameList = new ArrayList<Celebrity>();
+		// gameWindow = new CelebrityFrame(this);
 	}
 
 	/**
@@ -39,7 +36,7 @@ public class CelebrityGame
 	public void prepareGame()
 	{
 		celebGameList = new ArrayList<Celebrity>();
-		gameWindow.replaceScreen("START");
+		// gameWindow.replaceScreen("START");
 	}
 
 	/**
@@ -52,10 +49,7 @@ public class CelebrityGame
 	 */
 	public boolean processGuess(String guess)
 	{
-		if (guess.equals(gameCelebrity.getAnswer())){
-			return true;
-		}
-		return false;
+		return (guess.equals(gameCelebrity.getAnswer()));
 	}
 
 	/**
@@ -65,8 +59,10 @@ public class CelebrityGame
 	 */
 	public void play()
 	{
+		if (celebGameList.size() != 0) {
+			return;
+		}
 		gameCelebrity = celebGameList.get(0);
-		celebGameList.remove(0);
 	}
 
 	/**
@@ -92,8 +88,7 @@ public class CelebrityGame
 	 */
 	public boolean validateCelebrity(String name)
 	{
-
-		return( name.length() >= 4);
+		return (name.length() >= 4);
 	}
 
 	/**
@@ -105,7 +100,7 @@ public class CelebrityGame
 	 */
 	public boolean validateClue(String clue, String type)
 	{
-		return gameCelebrity.getClue().length() > 10;
+		return clue.length() >= 10;
 	}
 
 	/**
