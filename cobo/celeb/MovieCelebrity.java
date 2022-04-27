@@ -7,26 +7,26 @@ import java.util.ArrayList;
  * @author cody.henrichsen
  * @version 1.0 15/09/2018
  */
-public class LiteratureCelebrity extends Celebrity
+public class MovieCelebrity extends Celebrity
 {
 	/**
-	 * The list of clues for the Literature Celebrity. They can be titles of texts, important characters, settings, etc...s
+	 * The list of clues for the Movie Celebrity. They can be titles of texts, important characters, settings, etc...s
 	 */
 	private ArrayList<String> clueList;
 
 	/**
-	 * Builds a LiteratureCelebrity instance with an answer and a series of clues as a String separated by commas.
-	 * @param answer The literature celebrity
-	 * @param clues Clues for the literature celebrity
+	 * Builds a MovieCelebrity instance with an answer and a series of clues as a String separated by commas.
+	 * @param answer The movie celebrity
+	 * @param clues Clues for the movie celebrity
 	 */
-	public LiteratureCelebrity(String answer, String clues)
+	public MovieCelebrity(String answer, String clues)
 	{
 		super(answer, clues);
 		processClues();
 	}
 
 	/**
-	 * Processes the series of clues for the LiteratureCelebrity by adding all the values to an ArrayList<String> by
+	 * Processes the series of clues for the MovieCelebrity by adding all the values to an ArrayList<String> by
 	 * splitting the original clue to an array of String.
 	 * The original value is not impacted, thus preserving data and inheritance integrity.
 	 */
@@ -60,7 +60,7 @@ public class LiteratureCelebrity extends Celebrity
 	@Override
 	public String toString()
 	{
-		String dsc = "This is the literature celebrity: " + getAnswer() + "\nThe clues are:\n";
+		String dsc = "This is the movie celebrity: " + getAnswer() + "\nThe clues are:\n";
 
 		for (String word : super.getClue().split(","))
 		{

@@ -1,3 +1,5 @@
+// Non-Rogue AI (Samantha Hua, Ariel Fuchs, Nada Hameed)
+
 import java.util.ArrayList;
 
 /**
@@ -15,7 +17,7 @@ public class CelebrityGame
 	 /**
 	 * The GUI frame for the Celebrity game.
 	 */
-	 // private CelebrityFrame gameWindow;
+	 private CelebrityFrame gameWindow;
 	/**
 	 * The ArrayList of Celebrity values that make up the game
 	 */
@@ -101,9 +103,12 @@ public class CelebrityGame
 		Celebrity currentCelebrity;
 		if (type.equals("Literature"))
 		{
-			currentCelebrity = new LiteratureCelebritSy(name, guess);
+			currentCelebrity = new LiteratureCelebrity(name, guess);
 		}
-		else //Add an else if here
+		else if (type.equals("Movie")) {
+			currentCelebrity = new MovieCelebrity(name, guess);
+		}
+		else
 		{
 			currentCelebrity = new Celebrity(name, guess);
 		}
@@ -129,11 +134,30 @@ public class CelebrityGame
 	 */
 	public boolean validateClue(String clue, String type)
 	{
-		return clue.length() >= 10;
+		boolean validClue = false;
+		if (clue.trim().length() >= 10)
+		{
+			validClue = true;
+			if (type.equalsIgnoreCase("literature"))
+			{
+				String[] temp = clue.split(",");
+				if (temp.length > 1)
+				{
+					validClue = true;
+				}
+				else
+				{
+					validClue = false;
+				}
+			}
+		//You will need to add an else if condition here fo or your subclass
+		}
+		return validClue;
 	}
 
 	/**
-	 * Accessor method for the current size of the list of celebrities
+	 * Access	}atom://teletype/portal/c92a94f7-99ed-407d-b0d5-873f3c41871d
+or method for the current size of the list of celebrities
 	 *
 	 * @return Remaining number of celebrities
 	 */
