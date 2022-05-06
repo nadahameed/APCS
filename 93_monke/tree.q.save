@@ -1,0 +1,15 @@
+TNPG: Hot Cake (Samantha Hua, Ariel Fuchs, Nada Hameed)
+APCS pd07
+HW93: A Tree Grows in 251
+2022-04-06
+
+DISCO:
+- pre-order traversal: node is processed once it's reached
+- post-order traversal: node is processed once its subtrees are processed
+- in-order traversal: node is processed once its left subtree is processed
+
+QCC:
+
+
+SELF-ASSESSMNET PROMPTS
+
