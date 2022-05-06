@@ -16,6 +16,7 @@ DISCO
 QCC
 ------------------------------------------------
 * when would it be preferable to use each method of traversal?
+* Is the Man Who Is Tall Happy?
 ================================================
 
 
@@ -34,7 +35,7 @@ Is a perfect tree complete?
 Is a complete tree balanced? 
 * yes
 Is the Man Who Is Tall Happy?
-* yes
+* yes (something to do with placement of "is")
 What must be true of perfect trees but not others?
 * perfect trees' parent nodes have exactly two children.
 ================================================
@@ -42,7 +43,7 @@ What must be true of perfect trees but not others?
 
 C'EST POSSIBLE?
 ------------------------------------------------
-<  >
+< don't think so, wasn't able to reach a tree >
 ================================================
 
 
